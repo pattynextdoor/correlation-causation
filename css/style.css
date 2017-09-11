@@ -41,3 +41,24 @@ h2 {
   margin: 0 auto;
   margin-bottom: 10%;
 }
+
+ul {
+  list-style-type: none;
+  list-style-position: outside;
+  text-align: center;
+}
+
+li {
+  margin-right: 1em;
+  margin-left: 1em;
+  display: inline;
+}
+
+a {
+  color: #84B1ED;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #67D5B5;
+}
