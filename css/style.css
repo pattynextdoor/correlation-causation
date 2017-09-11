@@ -12,7 +12,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 30px;
   text-align: center;
   color: #34495e;
@@ -31,10 +31,13 @@ h2 {
 }
 
 .opening {
+  margin-top: 100px;
+  margin-bottom: 100px;
   padding-left: 25%;
   padding-right: 25%;
 }
 
-.col-lg-12 {
+.col-lg-6 {
   margin: 0 auto;
+  margin-bottom: 10%;
 }
