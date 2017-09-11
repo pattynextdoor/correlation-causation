@@ -10,4 +10,4 @@ Visit the website [here](https://correlation-causation.herokuapp.com/).
 
 ## License
 
-* [MIT](https://github.com/ptumb001/ptumb001.github.io/blob/master/LICENSE.md)
+* [MIT](https://github.com/ptumb001/correlation-causation/blob/master/LICENSE.md)
