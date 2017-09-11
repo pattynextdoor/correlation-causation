@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Correlations</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato|Lora" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+  	<div class="row">
+  		<div class="col-lg-12" id="header">
+  			<h1 class="text-center">
+  				Handpicked Data Sets
+  			</h1>
+  			<p class="text-center lead">A visualization of why <code>correlation != causation</code></p>
+  		</div>
+  	</div>
+    <div class="row">
+  		<div class="col-lg-12 opening">
+
+          <blockquote class="blockquote">
+            <p class="quote-text">
+              Many statistical tests calculate correlations between variables and when two variables are found to be correlated, it is tempting to assume that this shows that one variable causes the other.
+            </p>
+            <footer class="blockquote-footer">
+              <a href="https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation">Wikipedia</a>
+            </footer>
+          </blockquote>
+
+          <p> Analyzing a relationship between two variables is something that drives arguments in both academia and Facebook comment sections.
+          This is taught in most introductory psychology  and statistics classes.
+          But sometimes, it becomes hard to distinguish between correlation and causation in everyday situations.
+          </p>
+      </div>
+      <div class="col-lg-6" style="max-width: 900px">
+        <h2>Divorces in Maine and Margarine</h2>
+        <br>
+        <canvas id="myChart1"></canvas>
+        <script>
+            var ctx = document.getElementById('myChart1').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009"],
+                    datasets: [{
+                        label: "Divorces in Maine per 1000 people",
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: '#DE6449',
+                        data: [5, 4.7, 4.6, 4.4, 4.3, 4.1, 4.2, 4.2, 4.2, 4.1],
+                        yAxisID: 'first-y-axis',
+                        pointHitRadius: '10'
+                      }, {
+                        label: "Per capita consumption of margarine (US)",
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: '#41D3BD',
+                        data: [8.2, 7, 6.5, 5.3, 5.2, 4, 4.6, 4.5, 4.2, 3.7],
+                        yAxisID: 'second-y-axis',
+                        pointHitRadius: '10'
+                      }]
+                  },
+
+                // Configuration options go here
+                options: {
+                  tooltips: {
+                    mode: 'nearest'
+                  },
+                  scales: {
+                    yAxes: [{
+                        id: 'first-y-axis',
+                        type: 'linear',
+                        position: 'left'
+                    }, {
+                        id: 'second-y-axis',
+                        type: 'linear',
+                        position: 'right'
+                    }]
+                  }
+                }
+            });
+          </script>
+      </div>
+      <div class="col-lg-6" style="max-width: 900px">
+        <h2>Bedsheet Deaths <br>and Ski Profits</h2>
+        <canvas id="myChart2"></canvas>
+        <script>
+            var ctx = document.getElementById('myChart2').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009"],
+                    datasets: [{
+                        label: "Deaths by getting tangled in their bedsheets (US)",
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: '#f9c00c',
+                        data: [327, 456, 509, 497, 596, 573, 661, 741, 809, 717],
+                        yAxisID: 'first-y-axis',
+                        pointHitRadius: '10'
+                      }, {
+                        label: "Total revenue generated by skiing facilities",
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: '#7200da',
+                        data: [1551, 1635, 1801, 1827, 1956, 1989, 2178, 2257, 2476, 2438],
+                        yAxisID: 'second-y-axis',
+                        pointHitRadius: '10'
+                      }]
+                  },
+
+                // Configuration options go here
+                options: {
+                  tooltips: {
+                    mode: 'nearest'
+                  },
+                  scales: {
+                    yAxes: [{
+                        id: 'first-y-axis',
+                        type: 'linear',
+                        position: 'left'
+                    }, {
+                        id: 'second-y-axis',
+                        type: 'linear',
+                        position: 'right'
+                    }]
+                  }
+                }
+            });
+          </script>
+      </div>
+      <div class="col-lg-6" style="max-width: 900px">
+        <h2>Sour Cream and <br>Motorcycle Deaths</h2>
+        <canvas id="myChart3"></canvas>
+        <script>
+            var ctx = document.getElementById('myChart3').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009"],
+                    datasets: [{
+                        label: "Per capita consumption of sour cream (US), in half-pints",
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: '#F16B6F',
+                        data: [6.1, 6.5, 6.7, 7.5, 7.9, 8.3, 7.9, 8.2, 7.9, 7.8],
+                        yAxisID: 'first-y-axis',
+                        pointHitRadius: '10'
+                      }, {
+                        label: "Motorcycle riders killed in noncoliision transport accident",
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: '#AACD6E',
+                        data: [35, 34, 33, 47, 54, 63, 44, 56, 55, 51],
+                        yAxisID: 'second-y-axis',
+                        pointHitRadius: '10'
+                      }]
+                  },
+
+                // Configuration options go here
+                options: {
+                  tooltips: {
+                    mode: 'nearest'
+                  },
+                  scales: {
+                    yAxes: [{
+                        id: 'first-y-axis',
+                        type: 'linear',
+                        position: 'left'
+                    }, {
+                        id: 'second-y-axis',
+                        type: 'linear',
+                        position: 'right'
+                    }]
+                  }
+                }
+            });
+          </script>
+      </div>
+      <div class="col-lg-6" style="max-width: 900px">
+        <h2>Power Line Accidents and <br>Marriage in Alabama</h2>
+        <canvas id="myChart4"></canvas>
+        <script>
+            var ctx = document.getElementById('myChart4').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ["1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010"],
+                    datasets: [{
+                        label: "Number of people electrocuted by power lines",
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: '#FFBC42',
+                        data: [127, 99, 83, 109, 96, 94, 105, 93, 88, 84, 71, 63],
+                        yAxisID: 'first-y-axis',
+                        pointHitRadius: '7.5'
+                      }, {
+                        label: "Marriages in Alabama per 1000 people",
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: '#218380',
+                        data: [10.8, 10.1, 9.4, 9.9, 9.6, 9.4, 9.2, 9.2, 8.9, 8.6, 8.3, 8.2],
+                        yAxisID: 'second-y-axis',
+                        pointHitRadius: '7.5'
+                      }]
+                  },
+
+                // Configuration options go here
+                options: {
+                  tooltips: {
+                    mode: 'nearest'
+                  },
+                  scales: {
+                    yAxes: [{
+                        id: 'first-y-axis',
+                        type: 'linear',
+                        position: 'left'
+                    }, {
+                        id: 'second-y-axis',
+                        type: 'linear',
+                        position: 'right'
+                    }]
+                  }
+                }
+            });
+          </script>
+      </div>
+  	</div>
+
+  </div>
+</body>
+</html>

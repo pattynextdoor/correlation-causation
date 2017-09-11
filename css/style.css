@@ -1,0 +1,40 @@
+body {
+  background-color: white;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  color: #34495e;
+  font-family: "Lora", sans-serif;
+  font-weight: 700;
+  padding-top: 20px;
+  font-size: 3em;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #34495e;
+  font-family: "Lora", sans-serif;
+  font-weight: 600;
+}
+
+.lead {
+  font-size: 1.5em;
+}
+
+.blockquote {
+  font-size: 20px;
+  border-left: 5px solid #eee;
+  padding-left: 10px;
+}
+
+.opening {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.col-lg-12 {
+  margin: 0 auto;
+}
