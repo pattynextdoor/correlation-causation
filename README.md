@@ -1,6 +1,7 @@
+![](http://www.chartjs.org/img/chartjs-logo.svg)
 # correlation-causation
 
-Visit the website [here](https://correlation-causation.herokuapp.com/).
+Visualizes some data sets that (weirdly) correlate with each other. Inspired by and sourced from [here](http://tylervigen.com/old-version.html). Visit the website [here](https://correlation-causation.herokuapp.com/). 
 
 ## Built With
 
